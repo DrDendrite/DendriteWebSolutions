@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DendriteWebSolutions - Affordable Web Design & Hosting</title>
+    <meta name="description" content="Professional web design and hosting solutions for small businesses. From SSL certificates to domain names, we help you get seen online.">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Background particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">DendriteWebSolutions</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img src="images/DendriteWebSolutions_logo.png" alt="DendriteWebSolutions Logo" class="hero-logo">
+            <h1>DendriteWebSolutions</h1>
+            <p>Affordable web design and hosting solutions that help small businesses get seen online. From SSL certificates to domain names, we've got you covered.</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌐</div>
+                    <h3>Web Design</h3>
+                    <p>Professional, responsive websites designed to showcase your business and attract customers. Modern designs that work on all devices.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Hosting</h3>
+                    <p>Reliable hosting on major platforms like Google Cloud and AWS, or affordable local server solutions tailored to your budget.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔒</div>
+                    <h3>SSL Certificates</h3>
+                    <p>Secure your website and build trust with customers through professional SSL certificates and security implementations.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏷️</div>
+                    <h3>Domain Names</h3>
+                    <p>Help you find and register the perfect domain name for your business, with full management and renewal services.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile Optimization</h3>
+                    <p>Ensure your website looks and performs perfectly on smartphones, tablets, and all mobile devices.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🚀</div>
+                    <h3>Performance Optimization</h3>
+                    <p>Fast-loading websites that rank better in search engines and provide excellent user experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>Why Choose DendriteWebSolutions?</h2>
+                    <p>We specialize in making professional web presence accessible and affordable for small businesses. Our mission is to help every business establish a strong online presence without breaking the budget.</p>
+                    <p>Whether you need a simple website or a complete digital transformation, we provide scalable solutions that grow with your business.</p>
+                    <ul class="about-features">
+                        <li>Affordable pricing tailored for small businesses</li>
+                        <li>Professional designs that convert visitors</li>
+                        <li>Flexible hosting options (Cloud or Local)</li>
+                        <li>Complete security and SSL management</li>
+                        <li>Ongoing support and maintenance</li>
+                        <li>SEO optimization included</li>
+                    </ul>
+                </div>
+                <div class="about-visual fade-in">
+                    <h3>🎯 Our Focus</h3>
+                    <p style="margin-top: 1rem; color: var(--text-secondary);">Helping small businesses succeed online with professional, affordable web solutions.</p>
+                    <div style="margin-top: 2rem; padding: 1rem; background: var(--primary-bg); border-radius: 10px;">
+                        <h4 style="color: var(--neon-green); margin-bottom: 1rem;">✨ What Sets Us Apart</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">We understand that every dollar counts for small businesses. That's why we offer premium web solutions at prices that won't strain your budget, with the flexibility to choose between cloud or local hosting based on your needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form fade-in">
+                    <h3>Start Your Project</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Name</label>
+                            <input type="text" id="business" name="business">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="web-design">Web Design</option>
+                                <option value="hosting">Hosting Solutions</option>
+                                <option value="ssl">SSL Certificates</option>
+                                <option value="domain">Domain Registration</option>
+                                <option value="full-package">Complete Package</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project and requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info fade-in">
+                    <h3>Let's Connect</h3>
+                    <div class="contact-item">
+                        <h4>📧 Email</h4>
+                        <p>info@dendritewebsolutions.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📞 Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>🕒 Business Hours</h4>
+                        <p>Monday - Friday: 9AM - 6PM<br>
+                        Saturday: 10AM - 4PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>🎯 Our Promise</h4>
+                        <p>Quick response within 24 hours. Free consultation for all new projects. Transparent pricing with no hidden fees.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DendriteWebSolutions. All rights reserved. Helping small businesses thrive online.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Regresar al inicio">
+        <span class="back-to-top-icon">↑</span>
+    </button>
+
+    <!-- External JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

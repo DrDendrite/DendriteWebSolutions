@@ -1,0 +1,91 @@
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    background: var(--secondary-bg);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-form {
+    background: var(--accent-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--neon-magenta);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-bg);
+    border: 1px solid var(--text-muted);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--neon-magenta);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, var(--neon-magenta), var(--neon-cyan));
+    color: var(--text-primary);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 0, 255, 0.4);
+}
+
+.contact-info h3 {
+    color: var(--neon-cyan);
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--accent-bg);
+    border-radius: 10px;
+    border-left: 4px solid var(--neon-magenta);
+}
+
+.contact-item h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    color: var(--text-secondary);
+}

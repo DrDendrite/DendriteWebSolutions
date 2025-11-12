@@ -1,0 +1,13 @@
+/* DendriteWebSolutions - Main CSS File */
+/* Importing all block styles for better organization */
+
+@import url('blocks/base.css');
+@import url('blocks/header.css');
+@import url('blocks/hero.css');
+@import url('blocks/services.css');
+@import url('blocks/about.css');
+@import url('blocks/contact.css');
+@import url('blocks/footer.css');
+@import url('blocks/particles.css');
+@import url('blocks/back-to-top.css');
+@import url('blocks/responsive.css');
