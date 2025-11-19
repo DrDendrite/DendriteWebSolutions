@@ -22,6 +22,7 @@ class DendriteWebApp {
         this.setupHeaderScroll();
         this.setupContactForm();
         this.setupServiceCards();
+        this.setupProjectsCarousel();
         this.setupBackToTop();
         this.createParticles();
     }
@@ -124,12 +125,37 @@ class DendriteWebApp {
             return;
         }
         
-        // Show success message (in a real implementation, you'd send this to a server)
-        alert(CONFIG.form.successMessage);
-        form.reset();
+        // Show loading state
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
         
-        // Optional: Log form data for development
-        console.log('Form submitted with data:', data);
+        // Submit form (works with both Web3Forms and Formspree)
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert(CONFIG.form.successMessage);
+                form.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Form submission error:', error);
+            alert('Sorry, there was an error sending your message. Please try again or email us directly at info@dendritewebsolutions.com');
+        })
+        .finally(() => {
+            // Restore button state
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
     }
 
     // Interactive Service Cards
@@ -143,6 +169,120 @@ class DendriteWebApp {
                 this.style.transform = 'translateY(0) scale(1)';
             });
         });
+    }
+
+    // Projects Carousel Functionality
+    setupProjectsCarousel() {
+        const carousel = document.getElementById('projectsCarousel');
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.querySelectorAll('.indicator');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        if (!carousel || !track || !prevBtn || !nextBtn) return;
+
+        let currentSlide = 0;
+        const totalSlides = projectCards.length;
+        let autoPlayInterval;
+
+        // Update carousel position
+        const updateCarousel = () => {
+            const translateX = -currentSlide * 25;
+            track.style.transform = `translateX(${translateX}%)`;
+            
+            // Update active states
+            projectCards.forEach((card, index) => {
+                card.classList.toggle('active', index === currentSlide);
+            });
+            
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+        };
+
+        // Next slide
+        const nextSlide = () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        };
+
+        // Previous slide
+        const prevSlide = () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        };
+
+        // Go to specific slide
+        const goToSlide = (slideIndex) => {
+            currentSlide = slideIndex;
+            updateCarousel();
+        };
+
+        // Auto-play functionality
+        const startAutoPlay = () => {
+            autoPlayInterval = setInterval(nextSlide, 4000);
+        };
+
+        const stopAutoPlay = () => {
+            clearInterval(autoPlayInterval);
+        };
+
+        // Event listeners
+        nextBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            nextSlide();
+            startAutoPlay();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            prevSlide();
+            startAutoPlay();
+        });
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                stopAutoPlay();
+                goToSlide(index);
+                startAutoPlay();
+            });
+        });
+
+        // Pause on hover
+        carousel.addEventListener('mouseenter', stopAutoPlay);
+        carousel.addEventListener('mouseleave', startAutoPlay);
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            stopAutoPlay();
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            endX = e.touches[0].clientX;
+        });
+
+        carousel.addEventListener('touchend', () => {
+            const difference = startX - endX;
+            const threshold = 50;
+
+            if (Math.abs(difference) > threshold) {
+                if (difference > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+            startAutoPlay();
+        });
+
+        // Initialize
+        updateCarousel();
+        startAutoPlay();
     }
 
     // Back to Top Button Functionality

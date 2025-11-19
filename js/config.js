@@ -63,8 +63,49 @@ const CONFIG = {
         scrollOffset: 100,
         fadeInDuration: 600,
         particleCount: 50,
-        particleCountMobile: 20
+        particleCountMobile: 20,
+        carouselAutoPlay: 4000
     },
+
+    // Projects showcase
+    projects: [
+        {
+            id: 'web-project-1-es',
+            title: 'Web Project 1 ES',
+            category: 'Portfolio • GitHub Pages',
+            description: 'Modern Spanish business portfolio website showcasing professional services with clean design and interactive elements hosted on GitHub Pages.',
+            features: ['Responsive Design', 'GitHub Hosting', 'Spanish Language'],
+            technologies: ['HTML5', 'CSS3', 'JavaScript'],
+            url: 'https://drdendrite.github.io/web_project_1_es/'
+        },
+        {
+            id: 'pineda-nutricion',
+            title: 'Pineda Nutrición',
+            category: 'Healthcare • Custom Domain',
+            description: 'Professional nutrition and wellness website with custom domain, service descriptions, and client consultation features for a certified nutritionist.',
+            features: ['Custom Domain', 'Professional Design', 'Consultation Forms'],
+            technologies: ['HTML5', 'CSS3', 'JavaScript'],
+            url: 'https://pinedanutricion.com'
+        },
+        {
+            id: 'web-project-3-esp',
+            title: 'Web Project 3 ESP',
+            category: 'Business • GitHub Pages',
+            description: 'Spanish business website featuring modern design elements, service showcases, and professional presentation hosted on GitHub Pages platform.',
+            features: ['Modern Design', 'GitHub Hosting', 'Business Focus'],
+            technologies: ['HTML5', 'CSS3', 'JavaScript'],
+            url: 'https://drdendrite.github.io/web_project_3_esp/'
+        },
+        {
+            id: 'custom-project',
+            title: 'Your Business Website',
+            category: 'Custom Solution • Flexible Hosting',
+            description: 'Ready to create your professional web presence? We offer custom solutions with flexible hosting options to fit your budget and business needs.',
+            features: ['Custom Design', 'Flexible Hosting', 'Affordable Pricing'],
+            technologies: ['HTML5', 'CSS3', 'JavaScript', 'Custom Solutions'],
+            url: '#contact'
+        }
+    ],
 
     // Form Settings
     form: {

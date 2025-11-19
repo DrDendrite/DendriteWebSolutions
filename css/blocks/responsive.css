@@ -21,8 +21,8 @@
     }
 
     .hero-logo {
-        width: 100px;
-        margin-bottom: 1.5rem;
+        width: 150px;
+        margin-bottom: 0;
     }
 
     .hero h1 {
@@ -42,12 +42,50 @@
     .services-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Projects section responsive */
+    .carousel-container {
+        padding: 0 60px;
+    }
+
+    .carousel {
+        height: 600px;
+    }
+
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-image,
+    .project-info {
+        flex: 1;
+    }
+
+    .project-info {
+        padding: 1.5rem;
+    }
+
+    .carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .carousel-prev {
+        left: -52px;
+    }
+
+    .carousel-next {
+        right: -52px;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-logo {
-        width: 80px;
-        margin-bottom: 1rem;
+        width: 120px;
+        margin-bottom: 0;
+       
+
     }
 
     .hero h1 {
@@ -60,5 +98,41 @@
 
     .container {
         padding: 0 15px;
+    }
+
+    /* Projects section mobile */
+    .carousel-container {
+        padding: 0 50px;
+    }
+
+    .carousel {
+        height: 500px;
+    }
+
+    .project-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-info {
+        padding: 1rem;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .carousel-prev {
+        left: -45px;
+    }
+
+    .carousel-next {
+        right: -45px;
+    }
+
+    .feature-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
     }
 }

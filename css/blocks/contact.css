@@ -89,3 +89,14 @@
 .contact-item p {
     color: var(--text-secondary);
 }
+
+.email-link {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.email-link:hover {
+    color: var(--neon-magenta);
+    text-shadow: 0 0 5px var(--neon-magenta);
+}

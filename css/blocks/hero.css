@@ -18,8 +18,8 @@
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(255, 0, 255, 0.1) 2%, transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 2%, transparent 30%);
     animation: pulse 8s ease-in-out infinite alternate;
 }
 
@@ -29,9 +29,9 @@
 }
 
 .hero-logo {
-    width: 120px;
+    width: 220px;
     height: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     filter: drop-shadow(0 0 20px var(--neon-magenta));
     animation: glow 3s ease-in-out infinite alternate;
     transition: all 0.3s ease;
@@ -39,7 +39,7 @@
 
 .hero-logo:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 0 30px var(--neon-magenta)) brightness(1.1);
+    filter: drop-shadow(10px 10px 30px var(--neon-magenta)) brightness(4.1);
 }
 
 .hero h1 {
